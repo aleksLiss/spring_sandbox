@@ -1,10 +1,14 @@
 package ru.aleksLiss.sandbox;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MusicPlayer {
 
     private Music music;
     private String name;
     private int volume;
+    private List<Music> musicList = new ArrayList<>();
 
     public MusicPlayer(Music music) {
         this.music = music;
@@ -33,7 +37,13 @@ public class MusicPlayer {
         this.music = music;
     }
 
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;
+    }
+
     public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+        for (Music music1 : musicList) {
+            System.out.println("Playing: " + music1.getSong());
+        }
     }
 }
