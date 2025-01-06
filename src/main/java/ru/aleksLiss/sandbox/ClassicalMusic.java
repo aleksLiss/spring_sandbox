@@ -1,5 +1,8 @@
-  package ru.aleksLiss.sandbox;
+package ru.aleksLiss.sandbox;
 
+import org.springframework.stereotype.Component;
+
+@Component("classicalMusic")
 public class ClassicalMusic implements Music {
 
     private ClassicalMusic() {

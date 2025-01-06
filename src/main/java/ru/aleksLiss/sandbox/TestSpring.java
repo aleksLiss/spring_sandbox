@@ -9,7 +9,9 @@ public class TestSpring {
         );
 
         RockMusic rockMusic = context.getBean("rockMusic", RockMusic.class);
+        ClassicalMusic classicalMusic = context.getBean("classicalMusic", ClassicalMusic.class);
         System.out.println(rockMusic.getSong());
+        classicalMusic.getSong();
         context.close();
     }
 }
